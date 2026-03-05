@@ -1,0 +1,15 @@
+.tarjeta {
+  display: block; /* Asegura que el enlace ocupe todo el espacio */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: inherit; /* Mantiene el color del texto heredado */
+}
+
+/* Estilos específicos para imágenes */
+.imagen-destacada {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+}

@@ -1,0 +1,80 @@
+<!-- mining.html -->
+<section class="hero">
+  <h1 class="titulo-hero">Minería de Bitcoin</h1>
+  <p class="texto-hero">
+    Aprende cómo se generan nuevos bitcoins y cómo contribuir a la seguridad de
+    la red
+  </p>
+</section>
+
+<!-- Sección de navegación mejorada -->
+<div class="caracteristicas">
+  <div class="tarjeta" (click)="navigateTo('/')">
+    <h3 class="titulo-tarjeta">Inicio</h3>
+    <p>Volver a la página principal</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/wallets')">
+    <h3 class="titulo-tarjeta">Wallets</h3>
+    <p>Aprende sobre billeteras Bitcoin</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/nodos')">
+    <h3 class="titulo-tarjeta">Nodos</h3>
+    <p>Entiende la infraestructura de la red</p>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<section class="contenido-seccion">
+  <h2 class="titulo-seccion">Conceptos Básicos</h2>
+
+  <div class="caracteristicas">
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">¿Qué es la minería?</h3>
+      <p>
+        Proceso mediante el cual se validan transacciones y se agregan nuevos
+        bloques a la blockchain.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Hardware necesario</h3>
+      <p>
+        Desde CPUs hasta ASICs especializados, conoce el equipo necesario para
+        minar.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Recompensas</h3>
+      <p>
+        Los mineros reciben bitcoins nuevos y comisiones por transacción como
+        incentivo.
+      </p>
+    </div>
+  </div>
+
+  <div class="contenido-adicional">
+    <h3>Guía práctica para comenzar</h3>
+    <ol>
+      <li>Elige el hardware adecuado a tu presupuesto</li>
+      <li>Descarga software de minería compatible</li>
+      <li>Únete a un pool de minería o minera solo</li>
+      <li>Configura tu wallet para recibir recompensas</li>
+    </ol>
+    <img
+      src="assets/mining-hardware.jpg"
+      alt="Equipo de minería Bitcoin"
+      class="imagen-destacada"
+    />
+  </div>
+</section>
+
+<!-- Debug: Solo visible en desarrollo -->
+<div class="debug-nav" *ngIf="false">
+  <button (click)="navigateTo('/')">Inicio (Debug)</button>
+  <button (click)="navigateTo('/wallets')">Wallets (Debug)</button>
+  <button (click)="navigateTo('/nodos')">Nodos (Debug)</button>
+  <button (click)="navigateTo('/seguridad')">Seguridad (Debug)</button>
+</div>

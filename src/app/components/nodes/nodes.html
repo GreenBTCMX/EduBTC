@@ -1,0 +1,91 @@
+<!-- nodes.html -->
+<section class="hero">
+  <h1 class="titulo-hero">Nodos de Bitcoin</h1>
+  <p class="texto-hero">
+    Descubre la importancia de los nodos en la red descentralizada.
+  </p>
+</section>
+
+<!-- Sección de navegación mejorada -->
+<div class="caracteristicas">
+  <div class="tarjeta" (click)="navigateTo('/')">
+    <h3 class="titulo-tarjeta">Inicio</h3>
+    <p>Volver a la página principal</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/wallets')">
+    <h3 class="titulo-tarjeta">Wallets</h3>
+    <p>Aprende sobre billeteras Bitcoin</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/mineria')">
+    <h3 class="titulo-tarjeta">Minería</h3>
+    <p>Entiende el proceso que mantiene segura la red Bitcoin.</p>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<section class="contenido-seccion">
+  <h2 class="titulo-seccion">Conceptos Básicos</h2>
+
+  <div class="caracteristicas">
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">¿Qué son los nodos?</h3>
+      <p>
+        Un nodo de Bitcoin es un ordenador que forma parte de la red de Bitcoin
+        y ayuda a validar transacciones y mantener la integridad de la cadena de
+        bloques. Los nodos son esenciales para la descentralización y seguridad
+        de Bitcoin, ya que verifican que las transacciones sean válidas y se
+        adhieren a las reglas del protocolo.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Hardware necesario</h3>
+      <p>
+        Para tener un nodo Bitcoin, necesitas hardware con las siguientes
+        características: un procesador de 2 GHz o más, 2 GB de RAM (o más para
+        un rendimiento óptimo), y al menos 700 GB de espacio libre en disco para
+        un nodo completo (o 15 GB para un nodo podado o ligero). Además, una
+        conexión a internet de banda ancha es esencial. Se recomienda un SSD
+        para una sincronización más rápida.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Beneficios</h3>
+      <p>
+        permite a los usuarios verificar de forma independiente el estado de la
+        red bitcoin y la legitimidad de las transacciones, lo que mejora la
+        seguridad personal y contribuye a la salud general del ecosistema
+        bitcoin.
+      </p>
+    </div>
+  </div>
+
+  <div class="contenido-adicional">
+    <h3>Guía práctica para comenzar</h3>
+    <ol>
+      <li>Elige si quieres construir o comprar un nodo</li>
+      <li>
+        Necesitas instalar Bitcoin Knots, que puedes descargar desde el sitio
+        web oficia
+      </li>
+      <li>Sincronización de la cadena de bloques</li>
+      <li>Configuración tu nodo</li>
+    </ol>
+    <img
+      src="assets/mining-hardware.jpg"
+      alt="Nodo de Bitcoin"
+      class="imagen-destacada"
+    />
+  </div>
+</section>
+
+<!-- Debug: Solo visible en desarrollo -->
+<div class="debug-nav" *ngIf="false">
+  <button (click)="navigateTo('/')">Inicio (Debug)</button>
+  <button (click)="navigateTo('/wallets')">Wallets (Debug)</button>
+  <button (click)="navigateTo('/nodos')">Nodos (Debug)</button>
+  <button (click)="navigateTo('/seguridad')">Seguridad (Debug)</button>
+</div>

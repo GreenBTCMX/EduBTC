@@ -1,0 +1,343 @@
+:root {
+    --color-primario: #f7931a; /* Naranja Bitcoin */
+    --color-secundario: #0d579b; /* Azul oscuro */
+    --color-terciario: #329239; /* Verde */
+    --color-texto: #4d4d4d; /* Gris oscuro */
+    --color-fondo: #ffffff; /* Blanco */
+    --color-acento: #0d579b; /* Azul oscuro */
+    --espaciado-base: 1rem;
+    --tamano-fuente-base: 16px;
+    --tamano-fuente-pequeno: 0.875rem;
+    --tamano-fuente-grande: 1.25rem;
+    --ancho-maximo: 1200px;
+}
+
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    font-size: var(--tamano-fuente-base);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+
+/* Estructura principal */
+.contenedor-principal {
+    flex: 1;
+    padding: var(--espaciado-base);
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* CABECERA */
+.cabecera {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: var(--espaciado-base);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.titulo-principal {
+    font-size: var(--tamano-fuente-grande);
+    padding-bottom: var(--espaciado-base);
+}
+
+/* NAVEGACIÓN MÓVIL (abajo) */
+.navegacion-movil {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primario);
+    padding: 0.5rem 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.navegacion-movil ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navegacion-movil ul.menu li a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--tamano-fuente-pequeno);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.navegacion-movil ul.menu li a:hover {
+    color: var(--color-secundario);
+    transform: scale(1.1);
+}
+
+.navegacion-movil ul.menu li a i {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+/* NAVEGACIÓN ESCRITORIO (oculta inicialmente) */
+.navegacion-escritorio {
+    display: none;
+}
+
+/* CONTENIDO */
+.hero {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    padding: calc(var(--espaciado-base) * 3);
+    margin-bottom: var(--espaciado-base);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.titulo-hero {
+    font-size: calc(var(--tamano-fuente-grande) * 2);
+    margin-bottom: var(--espaciado-base);
+}
+
+.texto-hero {
+    font-size: var(--tamano-fuente-grande);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espaciado-base);
+    margin-bottom: var(--espaciado-base);
+}
+
+.tarjeta {
+    background-color: rgba(247, 147, 26, 0.1);
+    padding: var(--espaciado-base);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(247, 147, 26, 0.3);
+    transition: all 0.3s;
+}
+
+.tarjeta:hover {
+    background-color: rgba(13, 87, 155, 0.1);
+    transform: translateY(-5px);
+}
+
+.titulo-tarjeta {
+    color: var(--color-primario);
+    margin-bottom: calc(var(--espaciado-base) / 2);
+    font-size: var(--tamano-fuente-grande);
+    border-bottom: 2px solid var(--color-terciario);
+    padding-bottom: 0.5rem;
+}
+
+.contenido-adicional {
+    background-color: rgba(50, 146, 57, 0.1);
+    padding: var(--espaciado-base);
+    border-radius: 8px;
+    margin-bottom: var(--espaciado-base);
+    border: 1px solid var(--color-terciario);
+}
+
+.titulo-seccion {
+    color: var(--color-secundario);
+    margin-bottom: var(--espaciado-base);
+    font-size: var(--tamano-fuente-grande);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: var(--espaciado-base);
+    font-size: var(--tamano-fuente-pequeno);
+    margin-top: auto;
+}
+
+/* TABLETAS (600px en adelante) */
+@media screen and (min-width: 600px) {
+    :root {
+        --espaciado-base: 1.25rem;
+    }
+    
+    .navegacion-movil {
+        display: none;
+    }
+    
+    .navegacion-escritorio {
+        display: block;
+    }
+    
+    .navegacion-escritorio ul.menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .navegacion-escritorio ul.menu li a {
+        color: var(--color-fondo);
+        text-decoration: none;
+        padding: 0.7rem 1.2rem;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: all 0.3s;
+        border: 2px solid transparent;
+    }
+    
+    .navegacion-escritorio ul.menu li a:hover {
+        background-color: var(--color-fondo);
+        color: var(--color-primario);
+        border-color: var(--color-terciario);
+        transform: translateY(-3px);
+    }
+    
+    .cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--espaciado-base) calc(var(--espaciado-base) * 2);
+    }
+    
+    body {
+        padding-bottom: 0;
+    }
+    
+    .caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tarjeta {
+        background-color: rgba(13, 87, 155, 0.1);
+        border: 1px solid rgba(13, 87, 155, 0.3);
+    }
+    
+    .tarjeta:hover {
+        background-color: rgba(247, 147, 26, 0.1);
+    }
+}
+
+/* ESCRITORIO (992px en adelante) */
+@media screen and (min-width: 992px) {
+    :root {
+        --espaciado-base: 1.5rem;
+    }
+    
+    .navegacion-escritorio ul.menu {
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+    
+    .navegacion-escritorio ul.menu li a {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .caracteristicas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .titulo-hero {
+        font-size: calc(var(--tamano-fuente-grande) * 2.5);
+    }
+    
+    .tarjeta:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+}
+
+/* === MEJORAS PARA LA INTEGRACIÓN TYPESCRIPT === */
+
+/* 1. Estados activos mejorados (para ambos menús) */
+.menu li a.active {
+    position: relative;
+    font-weight: 700;
+}
+
+/* Movil - Estado activo */
+.navegacion-movil ul.menu li a.active {
+    color: var(--color-secundario);
+    transform: scale(1.1);
+}
+
+.navegacion-movil ul.menu li a.active i {
+    animation: pulse 0.5s ease;
+}
+
+/* Escritorio - Estado activo */
+@media screen and (min-width: 600px) {
+    .navegacion-escritorio ul.menu li a.active {
+        background-color: var(--color-fondo);
+        color: var(--color-primario);
+        border-color: var(--color-terciario);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .navegacion-escritorio ul.menu li a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 3px;
+        background: var(--color-terciario);
+        border-radius: 3px;
+    }
+}
+
+/* 2. Animaciones para transiciones suaves */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* 3. Ajuste para el contenido principal (evitar solapamiento con menú móvil) */
+@media screen and (max-width: 599px) {
+    .contenedor-principal {
+        padding-bottom: 80px; /* Espacio extra para el menú móvil */
+    }
+}
+
+/* 4. Feedback visual para tarjetas interactivas */
+.tarjeta {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 5. Mejora en los hover para dispositivos con mouse */
+@media (hover: hover) and (pointer: fine) {
+    .tarjeta:hover {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    .navegacion-escritorio ul.menu li a:hover {
+        transform: translateY(-3px) scale(1.05);
+        cursor: pointer;
+    }
+}

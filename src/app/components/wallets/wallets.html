@@ -1,0 +1,85 @@
+<!-- wallets.html -->
+<section class="hero">
+  <h1 class="titulo-hero">Wallets de Bitcoin</h1>
+  <p class="texto-hero">Aprende cómo almacenar tus bitcoins de forma segura.</p>
+</section>
+
+<!-- Sección de navegación mejorada -->
+<div class="caracteristicas">
+  <div class="tarjeta" (click)="navigateTo('/')">
+    <h3 class="titulo-tarjeta">Inicio</h3>
+    <p>Volver a la página principal</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/nodos')">
+    <h3 class="titulo-tarjeta">Nodos</h3>
+    <p>Descubre la importancia de los nodos en la red descentralizada.</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/mineria')">
+    <h3 class="titulo-tarjeta">Minería</h3>
+    <p>Entiende el proceso que mantiene segura la red Bitcoin.</p>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<section class="contenido-seccion">
+  <h2 class="titulo-seccion">Conceptos Básicos</h2>
+
+  <div class="caracteristicas">
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">¿Qué son los wallets?</h3>
+      <p>
+        Las billeteras de Bitcoin, o monederos de criptomonedas, son
+        herramientas que permiten a los usuarios almacenar, administrar y
+        realizar transacciones con sus bitcoins. No almacenan físicamente los
+        bitcoins, sino que gestionan las claves públicas y privadas necesarias
+        para acceder y utilizar los fondos que residen en la blockchain.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Hot Wallet</h3>
+      <p>
+        Las hot wallets son monederos de criptomonedas que permanecen
+        constantemente conectados a internet, lo que permite un acceso rápido y
+        fácil a tus fondos para realizar transacciones. Son ideales para el uso
+        diario y transacciones frecuentes, pero también presentan un mayor
+        riesgo de seguridad en comparación con las cold wallets.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Cold Wallet</h3>
+      <p>
+        Las billeteras frías, también conocidas como "cold wallets" o
+        "almacenamiento en frío", son un tipo de monedero de criptomonedas que
+        se caracteriza por mantener las claves privadas de los usuarios
+        desconectadas de internet.
+      </p>
+    </div>
+  </div>
+
+  <div class="contenido-adicional">
+    <h3>Guía práctica para comenzar</h3>
+    <ol>
+      <li>Comienza con un hot wallet como Aqua wallet.</li>
+      <li>Fondea cantidades pequeñas para acostubrarte al uso.</li>
+      <li>Despues de un tiempo de practica consigue un Cold wallet</li>
+      <li>Conecta tu cold wallet a tu nodo</li>
+    </ol>
+    <img
+      src="assets/mining-hardware.jpg"
+      alt="Wallet de Bitcoin"
+      class="imagen-destacada"
+    />
+  </div>
+</section>
+
+<!-- Debug: Solo visible en desarrollo -->
+<div class="debug-nav" *ngIf="false">
+  <button (click)="navigateTo('/')">Inicio (Debug)</button>
+  <button (click)="navigateTo('/wallets')">Wallets (Debug)</button>
+  <button (click)="navigateTo('/nodos')">Nodos (Debug)</button>
+  <button (click)="navigateTo('/seguridad')">Seguridad (Debug)</button>
+</div>

@@ -1,0 +1,84 @@
+<!-- security.html -->
+<section class="hero">
+  <h1 class="titulo-hero">Seguridad de Bitcoin</h1>
+  <p class="texto-hero">
+    Sigue los estandares mas alto para la seguridad de tus Bitcoin.
+  </p>
+</section>
+
+<!-- Sección de navegación mejorada -->
+<div class="caracteristicas">
+  <div class="tarjeta" (click)="navigateTo('/')">
+    <h3 class="titulo-tarjeta">Inicio</h3>
+    <p>Volver a la página principal</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/wallets')">
+    <h3 class="titulo-tarjeta">Wallets</h3>
+    <p>Aprende sobre billeteras Bitcoin</p>
+  </div>
+
+  <div class="tarjeta" (click)="navigateTo('/mineria')">
+    <h3 class="titulo-tarjeta">Minería</h3>
+    <p>Entiende el proceso que mantiene segura la red Bitcoin.</p>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<section class="contenido-seccion">
+  <h2 class="titulo-seccion">Conceptos Básicos</h2>
+
+  <div class="caracteristicas">
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">¿Seguridad en Bitcoin?</h3>
+      <p>
+        La seguridad es un pilar fundamental para participar de manera
+        responsable en el ecosistema de Bitcoin. A diferencia del sistema
+        financiero tradicional, en Bitcoin los usuarios tienen control total
+        sobre sus fondos, lo que implica también la responsabilidad de
+        protegerlos adecuadamente. .
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Usa billeteras seguras y confiables</h3>
+      <p>
+        Elige billeteras (wallets) con buena reputación y código abierto siempre
+        que sea posible. Hay varios tipos de billeteras:
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3 class="titulo-tarjeta">Protege tus llaves privadas</h3>
+      <p>
+        Las llaves privadas son la clave de acceso a tus bitcoins. Nunca las
+        compartas. Guarda tus frases de recuperación (seed phrase) en papel o en
+        una bóveda física, nunca en línea. No las subas a la nube ni las guardes
+        en fotos o notas sin cifrado.
+      </p>
+    </div>
+  </div>
+
+  <div class="contenido-adicional">
+    <h3>Guía práctica para comenzar</h3>
+    <ol>
+      <li>Elige una billetera confiable</li>
+      <li>Guarda bien tu frase de recuperación</li>
+      <li>Cuidado con estafas</li>
+      <li>Infórmate antes de invertir</li>
+    </ol>
+    <img
+      src="assets/mining-hardware.jpg"
+      alt="Seguridad de Bitcoin"
+      class="imagen-destacada"
+    />
+  </div>
+</section>
+
+<!-- Debug: Solo visible en desarrollo -->
+<div class="debug-nav" *ngIf="false">
+  <button (click)="navigateTo('/')">Inicio (Debug)</button>
+  <button (click)="navigateTo('/wallets')">Wallets (Debug)</button>
+  <button (click)="navigateTo('/nodos')">Nodos (Debug)</button>
+  <button (click)="navigateTo('/seguridad')">Seguridad (Debug)</button>
+</div>
